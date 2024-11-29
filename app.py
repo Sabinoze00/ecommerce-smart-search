@@ -13,7 +13,7 @@ st.set_page_config(page_title="E-commerce Search", layout="wide")
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_excel('NOME_FILE-EXCEL.xlsx')
+        df = pd.read_excel('database.xlsx')
         df = df.fillna('')
         logger.info(f"Loaded DataFrame with {len(df)} rows")
         return df
